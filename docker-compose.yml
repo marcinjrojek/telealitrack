@@ -1,0 +1,16 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # no display in the container; solve bot checks by running locally with HEADLESS=0
+      HEADLESS: "1"
+    volumes:
+      # database, telethon session and browser profile (cookies)
+      - botdata:/app/data
+    init: true
+    ipc: host
+
+volumes:
+  botdata:

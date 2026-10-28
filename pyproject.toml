@@ -1,0 +1,6 @@
+[project]
+name = "tele-ali"
+version = "0.1.0"
+description = "Telegram bot that alerts you when AliExpress item variations come back in stock"
+requires-python = ">=3.10"
+dependencies = ["telethon", "aiosqlite", "playwright", "python-dotenv"]
